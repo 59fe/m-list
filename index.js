@@ -85,13 +85,16 @@ var Li = function (_React$Component2) {
             'div',
             { className: 'item-title' },
             props.children
-        );
+        ),
+            itemInnerCls = (0, _classnames2.default)('item-inner', {
+            'noarrow': props.noarrow
+        });
 
         // 是否有副标题，subtitle这个参数决定行内容是单行还是多行
         if (!props.subtitle) {
             itemInnerJsx = _react2.default.createElement(
                 'div',
-                { className: 'item-inner' },
+                { className: itemInnerCls },
                 itemTitleJsx,
                 suffix && _react2.default.createElement(
                     'div',
@@ -112,7 +115,7 @@ var Li = function (_React$Component2) {
         } else {
             itemInnerJsx = _react2.default.createElement(
                 'div',
-                { className: 'item-inner' },
+                { className: itemInnerCls },
                 _react2.default.createElement(
                     'div',
                     { className: 'item-title-row' },
@@ -141,7 +144,7 @@ var Li = function (_React$Component2) {
         });
         var itemContentJsx = _react2.default.createElement(
             'li',
-            { className: itemContentCls, onClick: props.onTap },
+            { className: itemContentCls, onClick: props.onClick },
             props.img && _react2.default.createElement(
                 'div',
                 { className: 'item-media' },
@@ -153,7 +156,7 @@ var Li = function (_React$Component2) {
             itemContentCls = (0, _classnames2.default)(itemContentCls, 'item-link');
             itemContentJsx = _react2.default.createElement(
                 'li',
-                { onClick: props.onTap },
+                { onClick: props.onClick },
                 _react2.default.createElement(
                     'a',
                     { href: props.href, className: itemContentCls },
@@ -179,10 +182,10 @@ Li.propTypes = {
     detail: _react.PropTypes.string,
     img: _react.PropTypes.string,
     href: _react.PropTypes.string,
-    onTap: _react.PropTypes.func
+    onClick: _react.PropTypes.func
 };
 Li.defaultProps = {
-    onTap: function onTap() {}
+    onClick: function onClick() {}
 };
 exports.List = List;
 exports.Li = Li;

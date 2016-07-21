@@ -29,5 +29,6 @@ subtitle | 设置列表第二子行内容 | string | undefined
 detail | 设置列表第三、第四子行内容 | string | undefined
 img | 设置列表行左侧图片的URL | string | undefined
 href | 设置列表行点击后跳转的链接 | string | undefined
+noarrow | 设置列表行右侧没有箭头 | boolean | undefined
 onClick | 设置列表行点击后执行的回调函数 | function | noop
 
