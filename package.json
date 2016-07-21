@@ -1,0 +1,36 @@
+{
+  "name": "m-list",
+  "version": "1.0.0",
+  "description": " react移动端list列表组件",
+  "homepage": "https://github.com/59fe/m-list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/59fe/m-list.git"
+  },
+  "author": {
+    "name": "半边",
+    "email": "itaofe@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/59fe/m-list/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "list",
+    "react",
+    "mobile"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+    }
+  ],
+  "readmeFilename": "README.md",
+  "devDependencies": { }
+}
