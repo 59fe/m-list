@@ -32,5 +32,10 @@
     }
   ],
   "readmeFilename": "README.md",
-  "devDependencies": { }
+  "dependencies": {
+    "react": "~15.2.0",
+    "m-base": "^1.0.0",
+    "classnames": "~2.2.3"
+  }
+
 }
