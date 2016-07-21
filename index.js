@@ -1,100 +1,188 @@
-import React, {PropTypes} from 'react';
-import classNames from 'classnames';
+'use strict';
 
-class List extends React.Component {
-    render() {
-        let props = this.props
-        let listCls = classNames('list-block', {
-                "media-list": this.props.type == 'media'
-            }),
-            spaceStyle = {
-                marginTop: props.top,
-                marginBottom: props.bottom
-            }
-        return (
-            <div className={listCls} style={spaceStyle}>
-                {props.title && <h4>{props.title}</h4>}
-                <ul>
-                    {props.children}
-                </ul>
-            </div>
-        );
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Li = exports.List = undefined;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+
+var List = function (_React$Component) {
+    _inherits(List, _React$Component);
+
+    function List() {
+        _classCallCheck(this, List);
+
+        return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
     }
-}
+
+    List.prototype.render = function render() {
+        var props = this.props;
+        var listCls = (0, _classnames2.default)('list-block', {
+            "media-list": this.props.type == 'media'
+        }),
+            spaceStyle = {
+            marginTop: props.top,
+            marginBottom: props.bottom
+        };
+        return _react2.default.createElement(
+            'div',
+            { className: listCls, style: spaceStyle },
+            props.title && _react2.default.createElement(
+                'h4',
+                null,
+                props.title
+            ),
+            _react2.default.createElement(
+                'ul',
+                null,
+                props.children
+            )
+        );
+    };
+
+    return List;
+}(_react2.default.Component);
+
 List.propTypes = {
-    type: PropTypes.oneOf([undefined, 'media']),
-    title: PropTypes.string,
-    top: PropTypes.string,
-    bottom: PropTypes.string
-}
+    type: _react.PropTypes.oneOf([undefined, 'media']),
+    title: _react.PropTypes.string,
+    top: _react.PropTypes.string,
+    bottom: _react.PropTypes.string
+};
 
+var Li = function (_React$Component2) {
+    _inherits(Li, _React$Component2);
 
-class Li extends React.Component {
-    render() {
-        const props = this.props,
-            suffix = props.suffix
+    function Li() {
+        _classCallCheck(this, Li);
 
-        let itemInnerJsx = null,
-            itemTitleJsx = <div className="item-title">{props.children}</div>
+        return _possibleConstructorReturn(this, _React$Component2.apply(this, arguments));
+    }
+
+    Li.prototype.render = function render() {
+        var props = this.props,
+            suffix = props.suffix;
+
+        var itemInnerJsx = null,
+            itemTitleJsx = _react2.default.createElement(
+            'div',
+            { className: 'item-title' },
+            props.children
+        );
 
         // 是否有副标题，subtitle这个参数决定行内容是单行还是多行
         if (!props.subtitle) {
-            itemInnerJsx =
-                <div className="item-inner">
-                    {itemTitleJsx}
-                    {suffix && <div className="item-after">{suffix}</div>}
-                    {props.subtitle && <div className="item-subtitle">{props.subtitle}</div>}
-                    {props.detail && <div className="item-text">{props.detail}</div>}
-                </div>
+            itemInnerJsx = _react2.default.createElement(
+                'div',
+                { className: 'item-inner' },
+                itemTitleJsx,
+                suffix && _react2.default.createElement(
+                    'div',
+                    { className: 'item-after' },
+                    suffix
+                ),
+                props.subtitle && _react2.default.createElement(
+                    'div',
+                    { className: 'item-subtitle' },
+                    props.subtitle
+                ),
+                props.detail && _react2.default.createElement(
+                    'div',
+                    { className: 'item-text' },
+                    props.detail
+                )
+            );
         } else {
-            itemInnerJsx =
-                <div className="item-inner">
-                    <div className="item-title-row">
-                        {itemTitleJsx}
-                        {suffix && <div className="item-after">{suffix}</div>}
-                    </div>
-                    {props.subtitle && <div className="item-subtitle">{props.subtitle}</div>}
-                    {props.detail && <div className="item-text">{props.detail}</div>}
-                </div>
+            itemInnerJsx = _react2.default.createElement(
+                'div',
+                { className: 'item-inner' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'item-title-row' },
+                    itemTitleJsx,
+                    suffix && _react2.default.createElement(
+                        'div',
+                        { className: 'item-after' },
+                        suffix
+                    )
+                ),
+                props.subtitle && _react2.default.createElement(
+                    'div',
+                    { className: 'item-subtitle' },
+                    props.subtitle
+                ),
+                props.detail && _react2.default.createElement(
+                    'div',
+                    { className: 'item-text' },
+                    props.detail
+                )
+            );
         }
 
-        let itemContentCls = classNames('item-content', {
+        var itemContentCls = (0, _classnames2.default)('item-content', {
             "oneline": !props.subtitle
-        })
-        let itemContentJsx =
-            <li className={itemContentCls} onClick={props.onClick}>
-                {props.img && <div className="item-media"><img src={props.img} /></div>}
-                {itemInnerJsx}
-            </li>
+        });
+        var itemContentJsx = _react2.default.createElement(
+            'li',
+            { className: itemContentCls, onClick: props.onTap },
+            props.img && _react2.default.createElement(
+                'div',
+                { className: 'item-media' },
+                _react2.default.createElement('img', { src: props.img })
+            ),
+            itemInnerJsx
+        );
         if (props.href) {
-            itemContentCls = classNames(itemContentCls, 'item-link')
-            itemContentJsx =
-                <li onClick={props.onClick}>
-                    <a href={props.href} className={itemContentCls}>
-                        {props.img && <div className="item-media"><img src={props.img} /></div>}
-                        {itemInnerJsx}
-                    </a>
-                </li>
+            itemContentCls = (0, _classnames2.default)(itemContentCls, 'item-link');
+            itemContentJsx = _react2.default.createElement(
+                'li',
+                { onClick: props.onTap },
+                _react2.default.createElement(
+                    'a',
+                    { href: props.href, className: itemContentCls },
+                    props.img && _react2.default.createElement(
+                        'div',
+                        { className: 'item-media' },
+                        _react2.default.createElement('img', { src: props.img })
+                    ),
+                    itemInnerJsx
+                )
+            );
         }
 
-        return (
-            itemContentJsx
-        );
-    }
-}
+        return itemContentJsx;
+    };
+
+    return Li;
+}(_react2.default.Component);
 
 Li.propTypes = {
-    suffix: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.string
-    ]),
-    subtitle: PropTypes.string,
-    detail: PropTypes.string,
-    img: PropTypes.string,
-    href: PropTypes.string,
-    onClick: PropTypes.func
-}
-Li.defaultProps = {
-    onClick: () => {}
+    suffix: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
+    subtitle: _react.PropTypes.string,
+    detail: _react.PropTypes.string,
+    img: _react.PropTypes.string,
+    href: _react.PropTypes.string,
+    onTap: _react.PropTypes.func
 };
-export {List, Li};
+Li.defaultProps = {
+    onTap: function onTap() {}
+};
+exports.List = List;
+exports.Li = Li;
