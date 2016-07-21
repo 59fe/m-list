@@ -24,6 +24,7 @@ bottom | 设置列表区块是下间距,可选值为任意合法的css长度属�
 
 属性 | 说明 | 类型 | 默认值
 -----|-----|-----|------
+className | 为列表行的.item-content 元素追加css class类名 | string | ''
 suffix | 设置列表行后缀信息 | string或element | undefined
 subtitle | 设置列表第二子行内容 | string | undefined
 detail | 设置列表第三、第四子行内容 | string | undefined

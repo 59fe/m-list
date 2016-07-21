@@ -139,7 +139,7 @@ var Li = function (_React$Component2) {
             );
         }
 
-        var itemContentCls = (0, _classnames2.default)('item-content', {
+        var itemContentCls = (0, _classnames2.default)('item-content', props.className, {
             "oneline": !props.subtitle
         });
         var itemContentJsx = _react2.default.createElement(
