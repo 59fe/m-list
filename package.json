@@ -1,6 +1,6 @@
 {
   "name": "m-list",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": " react移动端list列表组件",
   "homepage": "https://github.com/59fe/m-list",
   "main": "index.js",
