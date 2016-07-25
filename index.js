@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Li = exports.List = undefined;
 
+require("./index.less");
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);

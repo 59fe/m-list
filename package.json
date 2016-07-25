@@ -15,6 +15,9 @@
     "name": "半边",
     "email": "itaofe@gmail.com"
   },
+  "bugs": {
+    "url": "https://github.com/59fe/m-list/issues"
+  },
   "keywords": [
     "list",
     "react",
