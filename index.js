@@ -179,7 +179,7 @@ var Li = function (_React$Component2) {
 
 Li.propTypes = {
     suffix: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
-    subtitle: _react.PropTypes.string,
+    subtitle: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
     detail: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
     img: _react.PropTypes.string,
     href: _react.PropTypes.string,
