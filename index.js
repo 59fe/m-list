@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _PropTypes = require('prop-types');
+
+var _PropTypes2 = _interopRequireDefault(_PropTypes);
+
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -178,12 +182,12 @@ var Li = function (_React$Component2) {
 }(_react2.default.Component);
 
 Li.propTypes = {
-    suffix: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
-    subtitle: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
-    detail: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
-    img: _react.PropTypes.string,
-    href: _react.PropTypes.string,
-    onClick: _react.PropTypes.func
+    suffix:    _PropTypes2.default.oneOfType([_PropTypes2.default.element, _PropTypes2.default.string]),
+    subtitle:  _PropTypes2.default.oneOfType([_PropTypes2.default.element, _PropTypes2.default.string]),
+    detail:    _PropTypes2.default.oneOfType([_PropTypes2.default.element, _PropTypes2.default.string]),
+    img:       _PropTypes2.default.string,
+    href:      _PropTypes2.default.string,
+    onClick:   _PropTypes2.default.func
 };
 Li.defaultProps = {
     onClick: function onClick() {}
